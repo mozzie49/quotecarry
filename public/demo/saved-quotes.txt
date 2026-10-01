@@ -1,0 +1,9 @@
+Completed uploads remain available for seven days after review.
+
+The review queue preserves the original order of submitted reports.
+
+Failed imports are retried automatically before the next review.
+
+Reviewers can export the full list of pending comments.
+
+Each archived report keeps its original reviewer notes.

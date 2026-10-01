@@ -1,0 +1,324 @@
+{
+  "schema": "quotecarry-report/1",
+  "appVersion": "0.1.0",
+  "scope": "Read-only, page-local comparison of searchable extracted PDF text. Occurrence counts do not guarantee uniqueness in the visible PDF; unreliable reading order can hide additional occurrences. Presence does not prove unchanged meaning or source authenticity. Not located does not mean deleted. Reports contain quoted content.",
+  "normalization": "Whitespace only: line endings, nonbreaking spaces, tabs and runs of whitespace. Case, punctuation, digits, hyphens and word order are preserved.",
+  "offsetUnits": "UTF-16 code units in the page raw extracted text",
+  "oldSource": {
+    "name": "old-handbook.pdf",
+    "sha256": "845e5041259344389540a127d6eb84f826bae3cd051c9256d238dd9fe9b67250",
+    "extractor": "PDF.js 6.3.289",
+    "pageCount": 3,
+    "complete": true,
+    "warnings": [],
+    "blankPages": [],
+    "pageLabels": [
+      {
+        "index": 1,
+        "label": null
+      },
+      {
+        "index": 2,
+        "label": null
+      },
+      {
+        "index": 3,
+        "label": null
+      }
+    ]
+  },
+  "revisedSource": {
+    "name": "new-handbook.pdf",
+    "sha256": "398d60fa6f11580cbc3945f5ee356f9092ed22b2af4bc7da3cdd0f0a3d7a6267",
+    "extractor": "PDF.js 6.3.289",
+    "pageCount": 4,
+    "complete": true,
+    "warnings": [],
+    "blankPages": [],
+    "pageLabels": [
+      {
+        "index": 1,
+        "label": null
+      },
+      {
+        "index": 2,
+        "label": null
+      },
+      {
+        "index": 3,
+        "label": null
+      },
+      {
+        "index": 4,
+        "label": null
+      }
+    ]
+  },
+  "results": [
+    {
+      "id": "q1",
+      "quote": "Completed uploads remain available for seven days after review.",
+      "label": "",
+      "note": "",
+      "pageHint": null,
+      "baselineStatus": "baseline_located",
+      "targetStatus": "literal_match",
+      "before": [
+        {
+          "id": "2:120:183",
+          "page": 2,
+          "label": null,
+          "start": 120,
+          "end": 183,
+          "text": "Completed uploads remain available for seven days after review.",
+          "kind": "literal",
+          "operations": [],
+          "context": {
+            "before": "1. Preparing the review\nReview windows follow a fixed schedule.\n",
+            "quote": "Completed uploads remain available for seven days after review.",
+            "after": "\nReports arrive through a single submission inbox.\nThe review queue "
+          }
+        }
+      ],
+      "after": [
+        {
+          "id": "3:119:182",
+          "page": 3,
+          "label": null,
+          "start": 119,
+          "end": 182,
+          "text": "Completed uploads remain available for seven days after review.",
+          "kind": "literal",
+          "operations": [],
+          "context": {
+            "before": "1. Preparing the review\nReview windows follow a fixed schedule.\n",
+            "quote": "Completed uploads remain available for seven days after review.",
+            "after": "\nReports arrive through a single submission inbox.\nThe review queue "
+          }
+        }
+      ],
+      "candidates": [],
+      "selectedOldId": null,
+      "pageMoved": true,
+      "contextStatus": "context_same",
+      "warnings": [],
+      "normalization": []
+    },
+    {
+      "id": "q2",
+      "quote": "The review queue preserves the original order of submitted reports.",
+      "label": "",
+      "note": "",
+      "pageHint": null,
+      "baselineStatus": "baseline_located",
+      "targetStatus": "normalized_match",
+      "before": [
+        {
+          "id": "2:234:301",
+          "page": 2,
+          "label": null,
+          "start": 234,
+          "end": 301,
+          "text": "The review queue preserves the original order of submitted reports.",
+          "kind": "literal",
+          "operations": [],
+          "context": {
+            "before": "days after review.\nReports arrive through a single submission inbox.\n",
+            "quote": "The review queue preserves the original order of submitted reports.",
+            "after": "\nThe following rule describes the import process.\nFailed imports are "
+          }
+        }
+      ],
+      "after": [
+        {
+          "id": "3:233:300",
+          "page": 3,
+          "label": null,
+          "start": 233,
+          "end": 300,
+          "text": "The review queue preserves the original\norder of submitted reports.",
+          "kind": "normalized",
+          "operations": [
+            "line breaks"
+          ],
+          "context": {
+            "before": "days after review.\nReports arrive through a single submission inbox.\n",
+            "quote": "The review queue preserves the original\norder of submitted reports.",
+            "after": "\nThe following rule describes the import process.\nFailed imports are "
+          }
+        }
+      ],
+      "candidates": [],
+      "selectedOldId": null,
+      "pageMoved": true,
+      "contextStatus": "context_same",
+      "warnings": [],
+      "normalization": [
+        "line breaks"
+      ]
+    },
+    {
+      "id": "q3",
+      "quote": "Failed imports are retried automatically before the next review.",
+      "label": "",
+      "note": "",
+      "pageHint": null,
+      "baselineStatus": "baseline_located",
+      "targetStatus": "possible_changed_passage",
+      "before": [
+        {
+          "id": "2:351:415",
+          "page": 2,
+          "label": null,
+          "start": 351,
+          "end": 415,
+          "text": "Failed imports are retried automatically before the next review.",
+          "kind": "literal",
+          "operations": [],
+          "context": {
+            "before": "of submitted reports.\nThe following rule describes the import process.\n",
+            "quote": "Failed imports are retried automatically before the next review.",
+            "after": "\nReview staff should check this section after each update.\nSynthetic "
+          }
+        }
+      ],
+      "after": [],
+      "candidates": [
+        {
+          "id": "3:350:418",
+          "page": 3,
+          "label": null,
+          "start": 350,
+          "end": 418,
+          "text": "Failed imports are not retried automatically before the next review.",
+          "kind": "candidate",
+          "operations": [
+            "whitespace normalization"
+          ],
+          "context": {
+            "before": "of submitted reports.\nThe following rule describes the import process.\n",
+            "quote": "Failed imports are not retried automatically before the next review.",
+            "after": "\nThe comments panel has a dedicated export action.\nReviewers can "
+          },
+          "score": 0.9474,
+          "diff": [
+            {
+              "type": "equal",
+              "text": "Failed imports are"
+            },
+            {
+              "type": "insert",
+              "text": "not"
+            },
+            {
+              "type": "equal",
+              "text": "retried automatically before the next review."
+            }
+          ]
+        }
+      ],
+      "selectedOldId": null,
+      "pageMoved": false,
+      "contextStatus": "context_unavailable",
+      "warnings": [],
+      "normalization": []
+    },
+    {
+      "id": "q4",
+      "quote": "Reviewers can export the full list of pending comments.",
+      "label": "",
+      "note": "",
+      "pageHint": null,
+      "baselineStatus": "baseline_located",
+      "targetStatus": "multiple_matches",
+      "before": [
+        {
+          "id": "3:131:186",
+          "page": 3,
+          "label": null,
+          "start": 131,
+          "end": 186,
+          "text": "Reviewers can export the full list of pending comments.",
+          "kind": "literal",
+          "operations": [],
+          "context": {
+            "before": "and archives\nThe comments panel has a dedicated export action.\n",
+            "quote": "Reviewers can export the full list of pending comments.",
+            "after": "\nArchived material remains read-only.\nEach archived report keeps its original "
+          }
+        }
+      ],
+      "after": [
+        {
+          "id": "3:469:524",
+          "page": 3,
+          "label": null,
+          "start": 469,
+          "end": 524,
+          "text": "Reviewers can export the full list of pending comments.",
+          "kind": "literal",
+          "operations": [],
+          "context": {
+            "before": "next review.\nThe comments panel has a dedicated export action.\n",
+            "quote": "Reviewers can export the full list of pending comments.",
+            "after": "\nSynthetic fixture | PDF page 3"
+          }
+        },
+        {
+          "id": "4:127:182",
+          "page": 4,
+          "label": null,
+          "start": 127,
+          "end": 182,
+          "text": "Reviewers can export the full list of pending comments.",
+          "kind": "literal",
+          "operations": [],
+          "context": {
+            "before": "archives\nA second copy of the export rule appears here.\n",
+            "quote": "Reviewers can export the full list of pending comments.",
+            "after": "\nThe archive section was rewritten for this revision.\nPrevious notes "
+          }
+        }
+      ],
+      "candidates": [],
+      "selectedOldId": null,
+      "pageMoved": false,
+      "contextStatus": "context_unavailable",
+      "warnings": [],
+      "normalization": []
+    },
+    {
+      "id": "q5",
+      "quote": "Each archived report keeps its original reviewer notes.",
+      "label": "",
+      "note": "",
+      "pageHint": null,
+      "baselineStatus": "baseline_located",
+      "targetStatus": "not_located",
+      "before": [
+        {
+          "id": "3:224:279",
+          "page": 3,
+          "label": null,
+          "start": 224,
+          "end": 279,
+          "text": "Each archived report keeps its original reviewer notes.",
+          "kind": "literal",
+          "operations": [],
+          "context": {
+            "before": "the full list of pending comments.\nArchived material remains read-only.\n",
+            "quote": "Each archived report keeps its original reviewer notes.",
+            "after": "\nThe archive section concludes this synthetic handbook.\nSynthetic fixture | "
+          }
+        }
+      ],
+      "after": [],
+      "candidates": [],
+      "selectedOldId": null,
+      "pageMoved": false,
+      "contextStatus": "context_unavailable",
+      "warnings": [],
+      "normalization": []
+    }
+  ]
+}
