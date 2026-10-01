@@ -8,6 +8,10 @@ An experimental, browser-local review tool for people who keep quotations from c
 
 ## Try the original five-passage demo
 
+**[Open the live experimental app](https://mozzie49.github.io/quotecarry/)** · No account, keys or file upload. Choose **Try the synthetic demo** to start.
+
+Or run it locally:
+
 ```sh
 npm ci --ignore-scripts
 npm run dev
@@ -74,13 +78,13 @@ npx playwright install chromium
 npm run test:browser     # desktop/mobile integration suite
 ```
 
-The browser suite is prepared but could not run in the build sandbox: Chromium could not create a required local socket (`EPERM`). Do not count it as passed. It checks the demo, previews, exports, local-file network behavior, imports, cancellation/reset, repeated runs and mobile overflow. See [`docs/validation.md`](docs/validation.md) for the actual evidence and remaining gates.
+The 52 Node tests, production build and 12 Chromium desktop/mobile checks passed in [GitHub Actions](https://github.com/mozzie49/quotecarry/actions/runs/36871362253). Coverage includes the demo, rendered PDF previews, JSON/HTML exports, reopening HTML, local-file network behavior, imports, cancellation/reset, repeated runs and mobile overflow. Screenshots were visually reviewed by an AI reviewer. Local Chromium could not run in the build sandbox (`EPERM`); browser evidence comes from CI and the deployed app. See [`docs/validation.md`](docs/validation.md) for scope and remaining limits.
 
 ## Static GitHub Pages deployment
 
 `npm run build` writes `dist/`, including PDF.js worker, fonts, character maps and decoder assets. Relative paths support a project subdirectory. No CDN is required.
 
-The included `Deploy reviewed prototype` workflow is **manual only**. After independent review, browser testing and an explicit publication decision, enable GitHub Pages with GitHub Actions and run it. CI runs core tests, builds and the browser suite on pushes/PRs. The repository is public staging. GitHub Pages and the experimental pre-release remain gated on remote CI and browser review.
+The included `Deploy reviewed prototype` workflow is **manual only**. CI runs core tests, builds and the browser suite on pushes/PRs. The deployment workflow repeats those checks before publishing the reviewed source. A passing build demonstrates the checked behaviors, not external demand or general extraction accuracy.
 
 ## Provenance and prior art
 
