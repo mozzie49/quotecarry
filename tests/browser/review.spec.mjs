@@ -20,10 +20,14 @@ test('capture reviewed layout and reopen the exported HTML',async({page,context}
  expect(await page.evaluate(()=>document.documentElement.scrollWidth<=window.innerWidth+1)).toBe(true);
  await page.screenshot({path:testInfo.outputPath('changed-preview.png'),fullPage:true});
  const [download]=await Promise.all([page.waitForEvent('download'),page.getByRole('button',{name:'Download HTML'}).click()]);
+ const reportPath=testInfo.outputPath('quotecarry-report.html');
+ await download.saveAs(reportPath);
  const report=await context.newPage();
- await report.goto('file://'+await download.path());
- await expect(report.getByText('Unverified suggestions',{exact:false})).toBeVisible();
+ await report.goto('file://'+reportPath);
+ await expect(report.getByRole('heading',{name:'Your saved passages, across revisions'})).toBeVisible();
+ await expect(report.getByRole('heading',{name:'Unverified suggestions'})).toBeVisible();
  expect(await report.locator('script').count()).toBe(0);
+ expect(await report.evaluate(()=>document.documentElement.scrollWidth<=window.innerWidth+1)).toBe(true);
  await report.screenshot({path:testInfo.outputPath('reopened-report.png'),fullPage:true});
  await report.close();
 });
