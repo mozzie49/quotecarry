@@ -1,0 +1,65 @@
+
+> quotecarry@0.1.0 test
+> node --test tests/*.test.mjs
+
+✔ literal quote (3.31775ms)
+✔ moved independent badge (0.401942ms)
+✔ line wrap maps to exact raw span (0.377897ms)
+✔ NBSP map and leading trim (0.778036ms)
+✔ negation only becomes candidate (1.615864ms)
+✔ changed number not accepted (0.20828ms)
+✔ failed baseline blocks positive (0.360635ms)
+✔ baseline duplicates (1.153059ms)
+✔ baseline human selection recorded (0.425667ms)
+✔ hint never resolves baseline ambiguity (0.452417ms)
+✔ new duplicates distant pages (0.255978ms)
+✔ exact and normalized occurrence both count (0.298359ms)
+✔ same page duplicate (0.151413ms)
+✔ hyphen preserved (0.144471ms)
+✔ line-end hyphen preserved (0.115746ms)
+✔ ligature preserved (0.223869ms)
+✔ no cross page stitching (0.137117ms)
+✔ case significant (0.106138ms)
+✔ short quote carries warning (0.288851ms)
+✔ overlength and empty rejected (0.444923ms)
+✔ occurrence cap explicit (10.173854ms)
+✔ substring inside word blocked (0.170288ms)
+✔ substring inside number blocked (0.110116ms)
+✔ unicode combining mark boundary (0.560088ms)
+✔ unicode letter and numeric boundary (0.108633ms)
+✔ punctuated whole words accepted (0.099266ms)
+✔ context negation visible despite exact quote (0.182121ms)
+✔ partial revised blocks unique (0.226473ms)
+✔ partial revised blocks negative (0.139923ms)
+✔ partial old blocks unique (0.199033ms)
+✔ identical bytes warning (0.261549ms)
+✔ physical index separate from ambiguous label (0.145141ms)
+✔ stable repeat results (0.717012ms)
+✔ word diff preserves changed numeric evidence (0.22972ms)
+✔ candidate windows cannot cross hard layout boundaries (0.356537ms)
+✔ swapping a source pair cannot validate a quote absent from that baseline (0.140744ms)
+✔ cached page mappings refresh if extracted text changes (0.23016ms)
+Warning: Indexing all PDF objects
+✔ synthetic PDF extraction / all five outcomes / reproducible exports (208.283077ms)
+✔ invalid signature rejected (0.780209ms)
+✔ malformed actual PDF rejected (2.085724ms)
+✔ blank page means incomplete (2.471747ms)
+✔ failed page means incomplete but retains visible evidence (2.837961ms)
+✔ all blank pages abstain rather than throwing away evidence (1.951032ms)
+✔ password protection explicit unsupported (0.4223ms)
+✔ abort before extraction (0.43807ms)
+✔ extraction timeout explicit (10.265805ms)
+✔ source and quote HTML is escaped in report (0.657541ms)
+✔ adjacent styled fragment and punctuation are not separated (0.210744ms)
+✔ split decimal number keeps punctuation (0.107101ms)
+✔ explicit PDF.js whitespace preserved (0.102021ms)
+✔ spatial gaps establish hard boundaries without markers (0.226024ms)
+✔ cancellation does not rely on parser promise rejecting (0.484187ms)
+ℹ tests 52
+ℹ suites 0
+ℹ pass 52
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 757.410671

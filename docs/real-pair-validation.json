@@ -1,0 +1,63 @@
+{
+  "checked_at": "2026-10-01T13:14:10.247Z",
+  "method": "Actual app core snapshot with PDF.js legacy in Node; not browser QA",
+  "code_sha256": {
+    "match": "453809839f8a337caaaf6ad9a7a3921ae1b19961f02ebdfd7a3a15de264c09c0",
+    "pdf-core": "538b794c7b04ae8ec21581dad4fbbf67ee20a8d8e2cde5cb39139741d871e72b"
+  },
+  "sources": [
+    {
+      "file": "2305.07759v1.pdf",
+      "sha256": "88968a98a12817075c7526daa8272719871c2178c97a78dd73675a56488502e6",
+      "source": "https://arxiv.org/pdf/2305.07759v1",
+      "bytes": 4022412
+    },
+    {
+      "file": "2305.07759v2.pdf",
+      "sha256": "e9d2d82534b4ccb7163559f00e68556988c49192a1433f860481544bc7dc2445",
+      "source": "https://arxiv.org/pdf/2305.07759v2",
+      "bytes": 4069571
+    },
+    {
+      "file": "2306.11644v1.pdf",
+      "sha256": "35144e4c99923c4c0806115cf313d7cf08e2f2a6444c823014a4122e153c890a",
+      "source": "https://arxiv.org/pdf/2306.11644v1",
+      "bytes": 1439522
+    },
+    {
+      "file": "2306.11644v2.pdf",
+      "sha256": "f2d7bc256626c20439601bccd12adbb4b4457763bc75ccda4509f00b4809cd89",
+      "source": "https://arxiv.org/pdf/2306.11644v2",
+      "bytes": 1439738
+    },
+    {
+      "file": "2402.03300v1.pdf",
+      "sha256": "500ce2fae51dd4e06d27423c9b8ec6ca2013eb577e74e5e15fd87510018c6e53",
+      "source": "https://arxiv.org/pdf/2402.03300v1",
+      "bytes": 1843099
+    },
+    {
+      "file": "2402.03300v3.pdf",
+      "sha256": "6cc20b3c5b8d25b8b53868fc4ec1792c144f07d67bdf7395138efd4422197e7b",
+      "source": "https://arxiv.org/pdf/2402.03300v3",
+      "bytes": 1844642
+    }
+  ],
+  "cases": 30,
+  "source_pairs": 3,
+  "retained": 23,
+  "changed_not_accepted": 7,
+  "moved": 5,
+  "candidate_suggestions_among_changed": 4,
+  "no_candidate_among_changed": 3,
+  "page_location_mismatches": 0,
+  "false_unique_matches_in_selected_cases": 0,
+  "visual_review": "AI reviewer inspected 23 relevant old/new PDF page renders, not a human user study. Expected locations derived independently using Poppler.",
+  "limits": [
+    "Selected Latin-script prose, not a representative accuracy benchmark.",
+    "No real-source duplicate cases; ambiguity tested on separate synthetic fixtures.",
+    "PDF.js legacy Node pipeline; browser rendering, download and interaction still pending.",
+    "A found passage does not establish unchanged meaning or source authenticity.",
+    "Full source PDFs and test quotations are excluded from this public summary."
+  ]
+}
