@@ -27,6 +27,7 @@ test('capture reviewed layout and reopen the exported HTML',async({page,context}
  await expect(report.getByRole('heading',{name:'Your saved passages, across revisions'})).toBeVisible();
  await expect(report.getByRole('heading',{name:'Unverified suggestions'})).toBeVisible();
  expect(await report.locator('script').count()).toBe(0);
+ expect(await report.evaluate(()=>document.documentElement.scrollWidth<=window.innerWidth+1)).toBe(true);
  await report.screenshot({path:testInfo.outputPath('reopened-report.png'),fullPage:true});
  await report.close();
 });
